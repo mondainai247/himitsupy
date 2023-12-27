@@ -3,7 +3,7 @@ import os
 
 from simplecrypt import encrypt, decrypt
 
-file_name = os.path.expanduser('~/Desktop/App_Beta/data/user.bin')
+file_name = os.path.expanduser('~/.himitsutanwa/user.bin')
 
 
 
