@@ -1,7 +1,7 @@
-# MosPy
+# Himitsupy
 
-MosPy is a fork of the cosmospy library and aims to be a versatile transaction signing library for the whole cosmos ecosystem.
-It depends [cosmospy-protobuf](https://github.com/ctrl-Felix/cosmospy-protobuf) for the protos. Through this library you also can add your own transaction types and sign them through Mospy.
+Himitsupy is fork of MosPy which is a fork of the cosmospy library and aims to be a versatile transaction signing library for the whole cosmos ecosystem.
+It depends [cosmospy-protobuf](https://github.com/ctrl-Felix/cosmospy-protobuf) for the protos. Through this library you also can add your own transaction types and sign them through Himitsupy.
 
 ## Documentation
 
@@ -15,7 +15,7 @@ You can find a tutorial series on medium: https://medium.com/@ctrl-felix/mospy-t
 
 Mospy is available through (pypi)[https://pypi.org/project/mospy-wallet]
 
-`python -m pip install mospy-wallet`
+You can simply copy and paste the updated utils.py file in this to your mospy installation if having the ripemd160 error. 
 
 _Note: The package name in python is mospy even if it is called mospy-wallet on pypi as mospy already existed_
 
