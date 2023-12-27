@@ -1,5 +1,5 @@
 import hashlib
-
+from Crypto.Hash import SHA256, RIPEMD160
 import ecdsa
 import hdwallets
 import bech32
@@ -25,10 +25,10 @@ def privkey_to_pubkey(privkey: bytes, raw: bool = False) -> bytes:
 
 
 def pubkey_to_address(pubkey: bytes, *, hrp: str) -> str:
-    s = hashlib.new("sha256", pubkey).digest()
-    r = hashlib.new("ripemd160", s).digest()
-    five_bit_r = bech32.convertbits(r, 8, 5)
-    assert five_bit_r is not None, "Unsuccessful bech32.convertbits call"
+    sha256_hash = SHA256.new(pubkey).digest()
+    ripemd160_hash = RIPEMD160.new(sha256_hash).digest()
+    five_bit_r = bech32.convertbits(ripemd160_hash, 8, 5)
+    assert five_bit_r is not None, "Unsuccessful bech32.convertbits call"  
     return bech32.bech32_encode(hrp, five_bit_r)
 
 
