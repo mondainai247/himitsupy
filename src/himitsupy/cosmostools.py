@@ -26,9 +26,9 @@ class Transaction:
         sequence: int,
         fee: int,
         gas: int,
-        fee_denom: str = "stake",
+        fee_denom: str = "himitsu",
         memo: str = "",
-        chain_id: str = "test",
+        chain_id: str = "himitsu",
         hrp: str = DEFAULT_BECH32_HRP,
         sync_mode: SyncMode = "sync",
     ) -> None:
